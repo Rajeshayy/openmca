@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Netlify Hello</title></head>
+<body>
+<h1>Hello from Netlify!</h1>
+<button onclick="callApi()">Call Serverless Function</button>
+<script>
+async function callApi() {
+const res = await fetch("/.netlify/functions/hello");
+const data = await res.text();
+alert(data);
+}
+</script>
+</body>
+</html>
